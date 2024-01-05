@@ -50,8 +50,9 @@ function KareninAlani(kenaruzunlugu) {
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
-function CemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinCevresi(yaricap) {
+  const cevre = 2 * pi * yaricap;
+  return cevre;
 }
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -64,8 +65,9 @@ function CemberinCevresi(/* kodlar buraya */) {
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinAlani(yaricap, pi) {
+  const alan = pi * Math.pow(yaricap, 2);
+  return alan;
 }
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -99,27 +101,57 @@ let ucetambolunenler,
 
 // 3a çözümü
 
-/* kodlar buraya */
+for (let i = 0; i < sayilar.length; i++) {
+  const yeniSayi = sayilar[i];
+  
+  if (yeniSayi < enkucuk) {
+      enkucuk = yeniSayi;
+  }
+
+  if (sayi > enbuyuk) {
+      enbuyuk = yeniSayi;
+  }
+}
 
 // 3b çözümü:
 
-/* kodlar buraya */
+sayilar.forEach(function(sayi) {
+  if (sayi % 3 === 0) {
+      ucetambolunenler.push(sayi);
+  }
+});
 
 // 3c çözümü:
 
-/* kodlar buraya */
+ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, yeni) => toplam + yeni, 0);
 
 // 3d çözümü
 
-/* kodlar buraya */
+besyuzdenkucuksayilar = sayilar.filter(sayi => sayi < 500);
 
 // 3e çözümü
 
-/* kodlar buraya */
+siralisayilar = [...besyuzdenkucuksayilar];
+siralisayilar.sort((a, b) => a - b);
 
 // 3f çözümü
 
-/* kodlar buraya */
+const tekrarlayanSayilar = {};
+
+sayilar.forEach(function(sayi) {
+    if (tekrarlayanSayilar[sayi] === undefined) {
+        tekrarlayanSayilar[sayi] = 1;
+    } else {
+        tekrarlayanSayilar[sayi]++;
+    }
+});
+
+for (const sayi in tekrarlayanSayilar) {
+    if (tekrarlayanSayilar[sayi] > 1) {
+        const tekrarString = `${sayi} sayısı ${tekrarlayanSayilar[sayi]} kere tekrar edilmiştir`;
+        tekraredensayilar.push(tekrarString);
+    }
+}
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
