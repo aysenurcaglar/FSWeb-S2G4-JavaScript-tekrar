@@ -108,7 +108,7 @@ for (let i = 0; i < sayilar.length; i++) {
       enkucuk = yeniSayi;
   }
 
-  if (sayi > enbuyuk) {
+  if (yeniSayi > enbuyuk) {
       enbuyuk = yeniSayi;
   }
 }
