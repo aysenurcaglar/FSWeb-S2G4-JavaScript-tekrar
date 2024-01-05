@@ -115,6 +115,7 @@ for (let i = 0; i < sayilar.length; i++) {
 
 // 3b çözümü:
 
+ucetambolunenler = [];
 sayilar.forEach(function(sayi) {
   if (sayi % 3 === 0) {
       ucetambolunenler.push(sayi);
@@ -136,6 +137,7 @@ siralisayilar.sort((a, b) => a - b);
 
 // 3f çözümü
 
+tekraredensayilar = [];
 const tekrarlayanSayilar = {};
 
 sayilar.forEach(function(sayi) {
