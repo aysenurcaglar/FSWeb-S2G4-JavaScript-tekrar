@@ -101,16 +101,16 @@ let ucetambolunenler,
 
 // 3a çözümü
 
-for (let i = 0; i < sayilar.length; i++) {
-  const yeniSayi = sayilar[i];
-  
-  if (yeniSayi < enkucuk) {
-      enkucuk = yeniSayi;
-  }
+enbuyuk = -Infinity;
+enkucuk = Infinity;
 
-  if (yeniSayi > enbuyuk) {
-      enbuyuk = yeniSayi;
-  }
+for (let i = 0; i < sayilar.length; i++) {
+ if(sayilar[i] > enbuyuk) {
+  enbuyuk = sayilar[i];
+ }
+ if (sayilar[i] < enkucuk) {
+  enkucuk = sayilar[i];
+ }
 }
 
 // 3b çözümü:
